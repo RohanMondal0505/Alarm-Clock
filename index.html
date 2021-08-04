@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container main">
+            <input type="datetime-local" id="time" />
+            <input type="text" id="title" placeholder="Title">
+            <input type="url" id="url" placeholder="https://www.abc.com">
+            <button class="set_alarm" onclick="setAlarm();">Set Alarm</button>
+        </div>
+
+        <div class="container sub">
+            <span id="time_text">10:00 AM</span>
+            <p id="setTitle">Class Time</p>
+            <div class="btn-container">
+                <button class="snooze">Snooze</button>
+                <button class="disable">Disable</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

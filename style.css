@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* font-family: 'Style Script', cursive; */
+	font-family: "Roboto Mono", monospace;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(./alarm\ Clock.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+
+button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 2rem;
+	font-size: 1.3rem;
+	padding: 0.5rem 1.8rem;
+	transition: all 0.5s ease;
+}
+button:hover {
+	background: rgba(41, 223, 247, 0.541);
+}
+
+.main-container {
+	height: 20rem;
+	width: 30rem;
+	padding: 0 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 1rem;
+	background: rgba(255, 255, 255, 0.3);
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.container.main {
+	display: flex;
+	flex-direction: column;
+	/* display: none; */
+}
+
+.container.main input {
+    width: 23rem;
+    height: 2rem;
+    border-radius: 2rem;
+	font-size: 1.3rem;
+	padding: 0.5rem 1rem;
+	outline: none;
+    border: none;
+}
+
+.container.main button {
+	background: rgb(41, 223, 247);
+	font-weight: 600;
+}
+.container.main button:hover {
+	background: rgb(81, 255, 46);
+}
+
+.container.sub {
+	display: none;
+	flex-direction: column;
+}
+
+.container.sub span {
+	font-size: 2.8rem;
+}
+
+.container.sub p {
+	font-size: 1.5rem;
+	font-family: "Style Script", cursive;
+}
+.container.sub .snooze:hover {
+	background: rgb(81, 255, 46);
+}
+.container.sub .disable:hover {
+	background: rgb(255, 58, 58);
+}
+
+@media screen and (max-width: 520px) {
+    html{
+        font-size: 90%;
+    }
+	.main-container {
+		max-width: 100% !important;
+        padding: 0rem !important;
+	}
+}
+@media screen and (max-width: 420px) {
+    html{
+        font-size: 80%;
+    }
+}
+@media screen and (max-width: 380px) {
+    html{
+        font-size: 75%;
+    }
+    input{
+        width: 20rem;
+    }
+}
