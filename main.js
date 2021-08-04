@@ -40,6 +40,9 @@ function setAlarm() {
 	if (alarmTime.getHours() > 12) {
 		temp = alarmTime.getHours() - 12;
 		AM_PM = "PM";
+	} else if (alarmTime.getHours() == 0) {
+		temp = 12;
+		AM_PM = "AM";
 	} else {
 		temp = alarmTime.getHours();
 		AM_PM = "AM";
