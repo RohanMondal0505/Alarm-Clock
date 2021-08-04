@@ -10,16 +10,14 @@ const alarmSound = new Audio();
 alarmSound.src = "./alarm tone.mp3";
 
 let timeOutFun;
-let timeText = '';
-let timeTitle = '';
-let timeUrl = '';
+let timeText = "";
+let timeTitle = "";
+let timeUrl = "";
 
 function setAlarm() {
-    const ms = document.querySelector("#time").valueAsNumber;
-    timeTitle = document.getElementById("title").value;
-    timeUrl = document.getElementById("url").value;
-
-    
+	const ms = document.querySelector("#time").valueAsNumber;
+	timeTitle = document.getElementById("title").value;
+	timeUrl = document.getElementById("url").value;
 
 	if (isNaN(ms)) {
 		alert("Date is not mention");
@@ -40,11 +38,11 @@ function setAlarm() {
 	let temp;
 	let AM_PM;
 	if (alarmTime.getHours() > 12) {
-        temp = alarmTime.getHours() - 12;
-        AM_PM = 'PM';
-    } else {
-        temp = alarmTime.getHours();
-        AM_PM = 'AM';
+		temp = alarmTime.getHours() - 12;
+		AM_PM = "PM";
+	} else {
+		temp = alarmTime.getHours();
+		AM_PM = "AM";
 	}
 
 	timeText = `${temp}:${alarmTime.getMinutes()} ${AM_PM}`;
@@ -74,10 +72,10 @@ function initAlarm() {
 	main.style.display = "none";
 	sub.style.display = "flex";
 
-    alarmSound.play();
-    document.getElementById("time_text").innerText = timeText;
-    document.getElementById("setTitle").innerText = timeTitle;
-    window.open(timeUrl);
+	alarmSound.play();
+	document.getElementById("time_text").innerText = timeText;
+	document.getElementById("setTitle").innerText = timeTitle;
+	window.open(timeUrl, "_blank");
 }
 
 disable.addEventListener(
@@ -87,8 +85,8 @@ disable.addEventListener(
 		sub.style.display = "none";
 
 		alarmSound.pause();
-        alarmSound.currentTime = 0;
-        cancelAlarm();
+		alarmSound.currentTime = 0;
+		cancelAlarm();
 	})
 );
 
